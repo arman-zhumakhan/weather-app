@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Weather App</h1>
+    <div class="form-container">
+        <form action="#" method="post">
+            <label for="city">Enter City Name</label>
+            <input type="text" name="city" id="city" placeholder="Hong Kong" required>
+            <div>
+                <button type="submit" id="submit">Search</button>
+                <button type="reset" id="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+    <div id="output">
+        <h2 id="cityName"></h2>
+        <div class="details">
+            <p class="details-title">Visibility: </p>
+            <p id="temperature"></p>
+        </div>
+        <div class="details">
+            <p class="details-title">Feels Like: </p>
+            <p id="feelsLike"></p>
+        </div>
+        <div class="details">
+            <p class="details-title">Humidity: </p>
+            <p id="humidity"></p>
+        </div>
+        <div class="details">
+            <p class="details-title">Wind: </p>
+            <p id="wind"></p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

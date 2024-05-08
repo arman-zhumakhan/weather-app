@@ -1,0 +1,18 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--white);
+    background-color: var(--blue);
+    background: var(--blue);
+    background: -webkit-linear-gradient(top, var(--light-blue), var(--blue));
+    background: -moz-linear-gradient(top, var(--light-blue), var(--blue));
+    background: linear-gradient(to bottom, var(--light-blue), var(--blue));
+}
+
+#output {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
