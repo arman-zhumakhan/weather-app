@@ -21,19 +21,21 @@ async function setWeather(city) {
     const wind = document.getElementById("wind");
 
     temperature.textContent = String(weatherData.temp_c) + " °C";
-    cityName.textContent = cityName;
-    feelsLike.textContent = "Feels like: " + String(weatherData.feelsLike) + " °C";
-    humidity.textContent = "Humidity: " + String(weatherData.humidity) + " %";
-    wind.textContent = "Wind: " + String(weatherData.wind) + " km/h";
+    cityName.textContent = weatherData.city + ", " + weatherData.country;
+    feelsLike.textContent = String(weatherData.feelsLike) + " °C";
+    humidity.textContent = String(weatherData.humidity) + " %";
+    wind.textContent = String(weatherData.wind) + " km/h";
 }
 
 function processData(data) {
     const processedData = {};
-    processedData.temp_c = data.current.temp_c;
     processedData.country = data.location.country;
-    processedData.time = data.location.last_updated;
-    processedData.feelsLike = data.current.feels_like;
+    processedData.city = data.location.name;
+    processedData.temp_c = data.current.temp_c;
+    processedData.feelsLike = data.current.feelslike_c;
     processedData.humidity = data.current.humidity;
+    processedData.wind = data.current.wind_kph;
+
     return processedData;
 }
 
